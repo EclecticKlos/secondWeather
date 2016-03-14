@@ -1,0 +1,10 @@
+{{ greeting }}
+
+<div class="find-state">
+  <div class="input-group">
+      <span class="input-group-btn">
+        <a href="#/forecast/" + {{ days }} class="btn btn-default" type="button"> Get Forecast</a>
+      </span>
+      <input type="text" class="form-control" placeholder="{{ city }}" aria-describedby="basic-addon1" ng-model="city">
+  </div>
+</div>

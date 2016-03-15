@@ -6,14 +6,8 @@ Number of days: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2'}">
 <div ng-repeat="day in weatherResult.list">
   <div class="row">
     <div class="col-md-12">
-      <div class="panel panel-default">
-      <div class="panel-heading" ng-bind="convertToDateFormat(day.dt) | date: 'EEE MM/dd'">
-          <!-- {{ convertToDateFormat(day.dt) }} -->
-          <h3 class="panel-title"></h3>
-        </div>
-        <div class="panel-body">
-          Daytime temperature: {{ convertToFahrenheit(day.temp.day) }}
-        </div>
+      <daily-forecast-snippet date-temp-object="day" convert-to-fahrenheit="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDateFormat(milliseconds)" date-format="EEE MMM d">
+      </daily-forecast-snippet>
       </div>
     </div>
   </div>
